@@ -24,6 +24,10 @@ io.on("connection", (socket)=>{
 
     });
 
+    socket.on("client-to-server", (message)=>{
+        console.log(message);
+    });
+
 });
 
 app.use(express.static("public"));
