@@ -1,8 +1,15 @@
 
+//const socket = io();
+
 let socket = io();
 
-socket.on("server-to-client", (message)=>{console.log(message);
-socket.emit("client-to-server", "Hello from client");
+
+socket.on("server-to-client", (message)=>{
+    const messages = document.getElementById("messages");
+    messages.innerHTML += message + "<br>";
+
+    //console.log(message);
+    //socket.emit("client-to-server", "Hello from client");
 
 });
 
