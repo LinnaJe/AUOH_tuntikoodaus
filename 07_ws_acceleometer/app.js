@@ -19,10 +19,10 @@ io.on("connection", (socket)=>{
         console.log("disconnected");
     });
 
-socket.on("sensor_data", (data) =>{
-    broadcast_sensor_data(data);
-    console.log(data);
-})
+    socket.on("sensor_data", (data) =>{
+        broadcast_sensor_data(data);
+        console.log(data);
+    });
 
 });
 
