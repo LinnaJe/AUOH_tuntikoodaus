@@ -29,3 +29,4 @@ socket.on("sensor_data", (data) =>{
 app.use(express.static("public"));
 
 server.listen(PORT);
+console.log("Server listening port", PORT);
